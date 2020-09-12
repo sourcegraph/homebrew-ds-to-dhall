@@ -2,16 +2,16 @@
 class DsToDhall < Formula
   desc "CLI to translate deploy-sourcegraph YAML to Dhall"
   homepage "https://github.com/sourcegraph/ds-to-dhall"
-  version "0.9.0"
+  version "0.10.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/sourcegraph/ds-to-dhall/releases/download/v0.9.0/ds-to-dhall_0.9.0_Darwin_x86_64.tar.gz"
-    sha256 "297005b749f5773cf00a4c85a5b6585890d318e4a666c455e71a008469019e17"
+    url "https://github.com/sourcegraph/ds-to-dhall/releases/download/v0.10.0/ds-to-dhall_0.10.0_Darwin_x86_64.tar.gz"
+    sha256 "3131bc0cfaa104fd8c87d11cc88d2ae99ba66c258140d113b5d8e0d27655d623"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/sourcegraph/ds-to-dhall/releases/download/v0.9.0/ds-to-dhall_0.9.0_Linux_x86_64.tar.gz"
-      sha256 "2d369cffabf1d82db54e5ec01c3a3acc126a31f19848754337f7a090cc8be9d2"
+      url "https://github.com/sourcegraph/ds-to-dhall/releases/download/v0.10.0/ds-to-dhall_0.10.0_Linux_x86_64.tar.gz"
+      sha256 "ed0d22171dc45d615df48bef3a2d55b396c807cca932fd143c344727b549c240"
     end
   end
 
