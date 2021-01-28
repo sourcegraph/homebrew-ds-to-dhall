@@ -5,21 +5,27 @@
 class DsToDhall < Formula
   desc "CLI to translate deploy-sourcegraph YAML to Dhall"
   homepage "https://github.com/sourcegraph/ds-to-dhall"
-  version "0.23.0"
+  version "0.24.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/sourcegraph/ds-to-dhall/releases/download/v0.23.0/ds-to-dhall_0.23.0_Darwin_x86_64.tar.gz"
-    sha256 "a57922ee7741befc4edc258645884d6e5e7adb86010b13fafaa96fc6aa876764"
+    url "https://github.com/sourcegraph/ds-to-dhall/releases/download/v0.24.0/ds-to-dhall_0.24.0_Darwin_x86_64.tar.gz"
+    sha256 "daa5c4b872bf8e46e6cb2998bac267083c973089b93189ae3642b4e29461bca9"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/sourcegraph/ds-to-dhall/releases/download/v0.23.0/ds-to-dhall_0.23.0_Linux_x86_64.tar.gz"
-    sha256 "ca6f4bfbc5cbb316ed21db138c4c0ee3f3ac2f6b5530c1698cabc90b7a359d96"
+    url "https://github.com/sourcegraph/ds-to-dhall/releases/download/v0.24.0/ds-to-dhall_0.24.0_Linux_x86_64.tar.gz"
+    sha256 "afb735a9b5dc1482d35064f45d7ebfa4ccdad3ea845c570f10f7f24774e59a38"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/sourcegraph/ds-to-dhall/releases/download/v0.23.0/ds-to-dhall_0.23.0_Linux_arm64.tar.gz"
-    sha256 "c00f7152163d7351a7fc19a2b3920f0ab88570ed9b648bef5b40d9a81e8b5159"
+    url "https://github.com/sourcegraph/ds-to-dhall/releases/download/v0.24.0/ds-to-dhall_0.24.0_Linux_arm64.tar.gz"
+    sha256 "06f4e881b2eac1f7e05dcee63d9f30676f07c50d96db0556118c882bccbb28f0"
   end
+
+  depends_on "dhall"
+  depends_on "dhall-json"
+  depends_on "dhall-yaml"
+  depends_on "dhall-bash"
+  depends_on "dhall-lsp-server"
 
   def install
     bin.install "ds-to-dhall"
